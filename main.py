@@ -8,8 +8,12 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/api", )
+@app.route("/api",methods=["GET", "POST"] )
 def api():
+    print(request.method)
+    if request.method == "POST":
+        #if request.form.get("")
+        return(request.form.get(""))
     return("api")
 
 if __name__ == "__main__":
