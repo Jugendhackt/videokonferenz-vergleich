@@ -38,11 +38,11 @@ body{
 
   a:hover{
     background-color: $secondary-color;
-    color: blue;
+    color: $primary-color;
   }
 }
 .div_1 a{
-  background-color:blue ;
+  background-color:$primary-color ;
   color: $secondary-color;
 
   text-decoration: none;
