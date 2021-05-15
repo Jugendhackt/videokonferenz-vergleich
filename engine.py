@@ -7,7 +7,6 @@ class Engine():
     def setcookie(key, data,response = "", duration = None):
         res = make_response(response)
         res.set_cookie(key, data, duration)
-        print(res)
         return res
 
     def cookie_check(name):
@@ -18,3 +17,12 @@ class Engine():
     
     def cookie_content(name):
         return request.cookies.get(name)
+
+    def cookie_delete(response = redirect("/")):
+        for y in request.cookies:
+            #print(y)
+            res = make_response(response)
+            res.set_cookie(y , "", expires=0)
+            return res
+
+            

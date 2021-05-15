@@ -19,9 +19,11 @@
             {{ questiontitle }}
             {{ question }}
         </div>
-        <form class="StartButton" action="/start" method="post">
-            <input type="submit" value="Start" name="Start">
-        </form>
+        {% if not started %}
+            <form class="StartButton" action="/start" method="post">
+                <input type="submit" value="Start" name="Start">
+            </form>
+        {% endif %}
         <div class="div_4">
             <!--Platzhalter-->
 
@@ -36,6 +38,11 @@
             <h1>{{ answer }}</h1>
         </div>
 
+        {% if started %}
+        <form class="StartButton" action="/interface" method="post">
+            <input type="submit" value="Neustarten" name="Neustarten">
+        </form>
+        {% endif %}
         
     </section>
 {% endblock %}

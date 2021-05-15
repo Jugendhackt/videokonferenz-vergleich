@@ -1,4 +1,4 @@
-from flask import request, Flask, render_template, make_response, url_for, redirect
+from flask import request, Flask, render_template, make_response, url_for, redirect, session
 from jinja2 import Template
 import json
 from engine import Engine as en
@@ -16,6 +16,7 @@ for keys, values in questions.items():
 
 @app.route('/',methods=["GET", "POST"])
 def index():
+    en.cookie_delete()
     if en.cookie_check("started") and en.cookie_check("question"):
         questionlist = []
         # lists all questions
@@ -25,21 +26,24 @@ def index():
         question_num = (int(en.cookie_content("question")) - 1)
         try:
             question = questions[questionlist[question_num]]
-            print(question)
+            #print(question)
             #print(question["answers"])
             answers = question["answers"]
             answer_options = []
-            #for items, values in question["answers"].items():
-            #    print(items)
-            #    print("\n")
-            #    print(values)
-            #    for q, w in values:
-            #        print(q)
+            #print(answer)
+            #print(question["answers"])
+            #for y, x in question["answers"].items():
+            #    print(y)
+                #print("\n")
+            #    print(x)
+                #for q, w in :
+                #    print(q)
                 #answer_options.append(values)
                 #print(answers["1"])
             #print(answer_options)
             return(render_template("index.html", 
-                questiontitle = str(questionlist[question_num]), 
+                started = True,
+                questiontitle = str(questionlist[question_num]) + " von " + str(len(questionlist)), 
                 question = question["question"],
                 answer = answer_options,
                 ))
@@ -65,10 +69,12 @@ def api():
 def summary():
     return render_template("Videokonferenz_Vergleich.html")
 
-@app.route('/favicon.ico')
-def favicon():
+@app.route('/interface',methods=["GET", "POST"])
+def interface():
+    if request.form['Neustarten'] == 'Neustarten':
+        return(en.cookie_delete())
+    return(redirect("/"))
 
-   pass
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080, debug=True)
