@@ -33,7 +33,7 @@ body{
   background-color: $primary-color ;
   padding: 14px 16px;
   display: flex;
-  justify-content: center;
+  //justify-content: center;
 
 
   a:hover{
@@ -63,7 +63,7 @@ a:active {
 
 @for $i from 1 through 4 {
   .div_#{$i} {
-    border: 1px solid black;
+    //border: 1px solid black;
     flex: 1 1 auto; 
 
     display: flex;

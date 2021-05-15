@@ -28,7 +28,6 @@ body {
   background-color: #00a6de;
   padding: 14px 16px;
   display: flex;
-  justify-content: center;
 }
 .div_1 ul a:hover {
   background-color: orange;
@@ -58,7 +57,6 @@ a:active {
 }
 
 .div_1 {
-  border: 1px solid black;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
@@ -66,7 +64,6 @@ a:active {
 }
 
 .div_2 {
-  border: 1px solid black;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
@@ -74,7 +71,6 @@ a:active {
 }
 
 .div_3 {
-  border: 1px solid black;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
@@ -82,7 +78,6 @@ a:active {
 }
 
 .div_4 {
-  border: 1px solid black;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
