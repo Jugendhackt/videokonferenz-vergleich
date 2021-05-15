@@ -1,9 +1,9 @@
-$primary-color : hsl(50,80%,50%);
-$secondary-color : hsl(226, 80%, 50%);
+$primary-color: hsl(50, 80%, 50%);
+$secondary-color: hsl(226, 80%, 50%);
 
 @font-face {
-    font-family: Roboto_Regular;
-    src: url(/static/fonts/Roboto-Regular.ttf);
+  font-family: Roboto_Regular;
+  src: url(/static/fonts/Roboto-Regular.ttf);
 }
 
 @font-face {
@@ -11,11 +11,11 @@ $secondary-color : hsl(226, 80%, 50%);
   src: url(/static/fonts/Roboto-Bold.ttf);
 }
 
-body{
-    font-family: Roboto_Regular;
-  }
+body {
+  font-family: Roboto_Regular;
+}
 
-.flexmaster{
+.flexmaster {
   flex-direction: column;
   display: flex;
   justify-content: space-evenly;
@@ -25,26 +25,25 @@ body{
   flex-wrap: nowrap;
 }
 
-.div_1 ul{
+.div_1 ul {
   text-decoration: none;
   list-style: none;
   list-style-type: none;
   line-break: auto;
-  background-color: $primary-color ;
+  background-color: $primary-color;
   padding: 14px 16px;
   display: flex;
   font-size: x-large;
   overflow: hidden;
   //justify-content: center;
 
-
-  a:hover{
+  a:hover {
     background-color: $secondary-color;
     color: $primary-color;
   }
 }
-.div_1 a{
-  background-color:$primary-color ;
+.div_1 a {
+  background-color: $primary-color;
   color: $secondary-color;
 
   text-decoration: none;
@@ -74,45 +73,58 @@ a:active {
   }
 }
 
-.yes_no{
+.yes_no {
+  input {
+    background-color: transparent;
+    border-style: ridge;
+    width: 7.5%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-family: Roboto_Bold;
+    font-size: x-large;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    border-width: 2px;
+  }
 
-input
-{background-color: transparent;
-border-color: black;
-border-width: 0.5;
-border-style: ridge;
-width: 7.5%;
-padding-top: 14px;
-padding-bottom: 14px;
-font-family: Roboto_Bold;
-font-size: x-large;
-border-radius: 8px;
-justify-content: center;
-align-items: center;
-border-width: 1px;
-}
-
-input[value=Ja] {
-  margin: 25px 25px 25px 40%;
-  padding: 20px;
-  padding-bottom: 13px;
+  input[value="Ja"] {
+    margin: 25px 25px 25px 40%;
+    padding: 20px;
+    padding-bottom: 13px;
     padding-top: 13px;
-  border-left-width: 0.8;
-  color: a3e77f;
-  
+    color: #a3e77f;
+    border-color: #a3e77f;
+  }
+
+  input[value="Nein"] {
+    margin: 25px 0px 25px 25px;
+    padding: 20px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    color: red;
+    border-color: red;
+  }
 }
 
-
-
-input[value=Nein] {
-  margin: 25px 0px 25px 25px;
-  padding: 20px;
-  padding-bottom: 13px;
-  padding-top: 13px;
-  border-left-width: 0.8;
-  color: red;
-  
-  
+.StartButton {
+  input {
+    color: #1A49E6;
+    background-color: #e6c41a;
+    border-color: #1A49E6;
+    border-width: 0.5;
+    border-style: ridge;
+    font: x-large;
+    font-family: Roboto_Bold;
+    margin: 0px;
+    padding: 20px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    border-width: 2px;
+    border-radius: 8px;
+  }
 }
 
+form {
+  margin: 0 auto;
 }

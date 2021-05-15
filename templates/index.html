@@ -19,6 +19,9 @@
             {{ questiontitle }}
             {{ question }}
         </div>
+        <form class="StartButton" action="/start" method="post">
+            <input type="submit" value="Start" name="Start">
+        </form>
         <div class="div_4">
             <!--Platzhalter-->
 
@@ -33,9 +36,7 @@
             <h1>{{ answer }}</h1>
         </div>
 
-        <form action="/start" method="post">
-            <input type="submit" value="Start" name="Start">
-        </form>
+        
     </section>
 {% endblock %}
 
