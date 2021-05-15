@@ -12,8 +12,9 @@ def index():
 def api():
     print(request.method)
     if request.method == "POST":
-        #if request.form.get("")
-        return(request.form.get(""))
+        if request.form.get("Start") == "Start":
+            return render_template("Start")
+        #return(request.form.get("Start"))
     return("api")
 
 if __name__ == "__main__":
