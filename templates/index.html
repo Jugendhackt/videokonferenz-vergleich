@@ -3,21 +3,26 @@
     <section class="flexmaster">
         
         <div class="div_1">
-            <h1>Title</h1>
+            <!--nav bar-->
+            <ul>
+                <li><a href="{{ url_for('static',filename='templates/index.html') }}">Start</a></li>
+            </ul>
         </div>
         <div class="div_2">
+            <!--Platzhalter-->
         </div>
         <div class="div_3">
+            <!--Frage-->
+
         </div>
         <div class="div_4">
+            <!--Platzhalter-->
+
         </div>
         <div class="div_5">
-        </div>
-        <div class="div_6">
+            <!--Fine print-->
         </div>
 
-
-        
         <form action="/api" method="post">
             <input type="submit" value="Start" name="Start">
         </form>
