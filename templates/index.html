@@ -18,6 +18,9 @@
             <!--Frage-->
             {{ question }}
         </div>
+        <form class="StartButton" action="/api" method="post">
+            <input type="submit" value="Start" name="Start">
+        </form>
         <div class="div_4">
             <!--Platzhalter-->
 
@@ -28,9 +31,7 @@
             {{ answer }}
         </div>
 
-        <form action="/api" method="post">
-            <input type="submit" value="Start" name="Start">
-        </form>
+        
     </section>
 {% endblock %}
 
