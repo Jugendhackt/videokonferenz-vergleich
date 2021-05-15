@@ -73,3 +73,46 @@ a:active {
     flex-direction: column;
   }
 }
+
+.yes_no{
+
+input
+{background-color: transparent;
+border-color: black;
+border-width: 0.5;
+border-style: ridge;
+width: 7.5%;
+padding-top: 14px;
+padding-bottom: 14px;
+font-family: Roboto_Bold;
+font-size: x-large;
+border-radius: 8px;
+justify-content: center;
+align-items: center;
+border-width: 1px;
+}
+
+input[value=Ja] {
+  margin: 25px 25px 25px 40%;
+  padding: 20px;
+  padding-bottom: 13px;
+    padding-top: 13px;
+  border-left-width: 0.8;
+  color: a3e77f;
+  
+}
+
+
+
+input[value=Nein] {
+  margin: 25px 0px 25px 25px;
+  padding: 20px;
+  padding-bottom: 13px;
+  padding-top: 13px;
+  border-left-width: 0.8;
+  color: red;
+  
+  
+}
+
+}
