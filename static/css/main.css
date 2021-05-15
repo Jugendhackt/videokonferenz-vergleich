@@ -1,6 +1,6 @@
 @font-face {
   font-family: Roboto_Regular;
-  src: url("var(--background-url)");
+  src: url();
 }
 body {
   font-family: Roboto_Regular;
@@ -12,40 +12,37 @@ body {
   justify-content: space-evenly;
   align-content: space-between;
   flex: 1;
+  flex-wrap: nowrap;
 }
 
 .div_1 {
-  border: 1px, solid, black;
+  border: 1px solid black;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: chartreuse;
 }
 
 .div_2 {
-  border: 1px, solid, black;
+  border: 1px solid black;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: chartreuse;
 }
 
 .div_3 {
-  border: 1px, solid, black;
+  border: 1px solid black;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: chartreuse;
 }
 
 .div_4 {
-  border: 1px, solid, black;
+  border: 1px solid black;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: chartreuse;
 }/*# sourceMappingURL=main.css.map */
