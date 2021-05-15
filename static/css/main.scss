@@ -1,5 +1,5 @@
-$primary-color : #00a6de;
-$secondary-color : orange;
+$primary-color : hsl(50,80%,50%);
+$secondary-color : hsl(226, 80%, 50%);
 
 @font-face {
     font-family: Roboto_Regular;
@@ -66,7 +66,7 @@ a:active {
 @for $i from 1 through 4 {
   .div_#{$i} {
     //border: 1px solid black;
-    flex: 1 1 auto; 
+    flex: 1 1 auto;
 
     display: flex;
     justify-content: center;
