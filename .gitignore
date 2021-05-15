@@ -1,2 +1,2 @@
 .vscode/
-venv/lib/python3.9/site-packages
+__pycache__/
