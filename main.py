@@ -2,21 +2,40 @@ from flask import request, Flask, render_template, make_response, url_for, redir
 from jinja2 import Template
 import json
 from engine import Engine as en
+global questions
 
+with open("static/Fragen/fragen.json") as json_data:
+    #print(type(json.load(json_data)))
+    questions = json.load(json_data)
+
+for keys, values in questions.items():
+    print(keys)
+print(questions["Frage 1"])
+#print(z)
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return render_template("index.html")
-
+    
 
 @app.route("/api",methods=["GET", "POST"] )
 def api():
-    print(request.method)
+    questionlist = []
     if request.method == "POST":
-        print(en.cookie_check("key"))
-        if not en.cookie_check("key"):
-            return en.setcookie("key","test",redirect("/") )
+        response = make_response(redirect("/"))
+        if not en.cookie_check("started") or not en.cookie_check("question"):
+            response.set_cookie("started", "1", None)
+            response.set_cookie("question", "1", None)
+            return response
+    for keys, values in questions.items():
+        questionlist.append(keys)
+    try: 
+        print(questions[1])
+        print("yup")
+        pass
+    except:
+        print("nope")
     return(redirect("/"))
 
 
@@ -27,7 +46,7 @@ def summary():
 
 @app.route('/favicon.ico')
 def favicon():
-    
+
    pass
 
 if __name__ == "__main__":
