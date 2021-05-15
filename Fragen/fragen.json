@@ -1,15 +1,25 @@
 {
     "Frage 1": {
         "type" : "yes_no",
-        "question" : "Das ist eine Testfrage",
+        "question" : "Brauchst du Blackboards",
         "answers" : {
             "1" : {
                 "answ" : "Ja",
-                "points" : 10 
+                "points" : {
+                    "points" : 20,
+                    "point_type" : "usability",
+                    "whitelist" : ["google_meet", "teams" , "bbb"],
+                    "blacklist" : []
+                }
             }, 
             "2" : {
                 "answ" : "Nein",
-                "points" : 30 
+                "points" : {
+                    "points" : 10,
+                    "point_type" : "usability",
+                    "whitelist" : ["google_meet", "teams" , "bbb"],
+                    "blacklist" : []
+                } 
             } 
         }
     },

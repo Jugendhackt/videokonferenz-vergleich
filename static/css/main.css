@@ -28,6 +28,8 @@ body {
   background-color: #00a6de;
   padding: 14px 16px;
   display: flex;
+  font-size: x-large;
+  overflow: hidden;
 }
 .div_1 ul a:hover {
   background-color: orange;

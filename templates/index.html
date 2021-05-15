@@ -6,8 +6,9 @@
             <!--nav bar-->
             <ul>
                 <img src="{{ url_for('static',filename='/img/Logo_GIF.gif') }}" alt="" width="5%" ></li>
-                <li><a href="{{ url_for('static',filename='templates/index.html') }}">Start</a></li>
+                <li><a href="{{ url_for('static',filename='templates/index.html') }}">Home</a></li>
                 <li><a href="https://jugendhackt.org/events/frankfurt/">Jugendhackt Frankfurt</a></li>
+                <li><a href="/summary">Unser Projekt</a></li>
             </ul>
         </div>
         <div class="div_2">
@@ -15,14 +16,15 @@
         </div>
         <div class="div_3">
             <!--Frage-->
-
+            {{ question }}
         </div>
         <div class="div_4">
             <!--Platzhalter-->
 
         </div>
         <div class="div_5">
-            <!--Fine print-->
+            <!--Answer-->
+            {{ answer }}
         </div>
 
         <form action="/api" method="post">
