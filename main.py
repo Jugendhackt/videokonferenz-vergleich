@@ -4,21 +4,42 @@ import json
 from engine import Engine as en
 global questions
 
+app = Flask(__name__)
+
 with open("static/Fragen/fragen.json") as json_data:
     #print(type(json.load(json_data)))
     questions = json.load(json_data)
 
 for keys, values in questions.items():
     print(keys)
-print(questions["Frage 1"])
-app = Flask(__name__)
+#print(questions["Frage 1"])
 
-@app.route('/')
+@app.route('/',methods=["GET", "POST"])
 def index():
-    return render_template("index.html")
-    
+    if en.cookie_check("started") and en.cookie_check("question"):
+        questionlist = []
+        for keys, values in questions.items():
+            questionlist.append(keys)
+        question_num = (int(en.cookie_content("question")) - 1)
+        if len(questionlist) >= question_num:
+            #print(str(questionlist[question_num]))
+            print("true")
+            question = questions[questionlist[question_num]]
+            #print(question)
+            #print(question["answers"])
+            answers = question["answers"]
+            for i, y in question["answers"].items():
+                print(y)
+                #print(answers["1"])
+            return(render_template("index.html", 
+                questiontitle = str(questionlist[question_num]), 
+                question = question["question"],
+                answer = question["answers"]
+                ))
+    else:
+        return render_template("index.html")
 
-@app.route("/api",methods=["GET", "POST"] )
+@app.route("/start",methods=["GET", "POST"] )
 def api():
     questionlist = []
     if request.method == "POST":
@@ -27,15 +48,7 @@ def api():
             response.set_cookie("started", "1", None)
             response.set_cookie("question", "1", None)
             return response
-    for keys, values in questions.items():
-        questionlist.append(keys)
-    try: 
-        print(questions[1])
-        print("yup")
-    except:
-        print("nope")
     return(redirect("/"))
-
 
 
 @app.route("/summary")
