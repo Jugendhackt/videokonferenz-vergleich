@@ -58,7 +58,7 @@ def summary():
 
 @app.route('/interface',methods=["GET", "POST"])
 def interface():
-    if request.form['Neustarten'] == 'Neustarten':
+    if request.form['Neustarten'] == 'Neustarten (Löscht alle Cookies)':
         return(en.cookie_delete())
         return(redirect("/"))
     elif request.form['Nein'] == 'Nein':
