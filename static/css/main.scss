@@ -14,7 +14,11 @@ $secondary-color: hsl(226, 80%, 50%);
 body {
   font-family: Roboto_Regular;
 }
+.dark-mode{
+  color: white;
+  background-color: black;
 
+}
 .flexmaster {
   flex-direction: column;
   display: flex;
@@ -25,24 +29,32 @@ body {
   flex-wrap: nowrap;
 }
 
-.div_1 ul {
-  text-decoration: none;
-  list-style: none;
-  list-style-type: none;
-  line-break: auto;
-  background-color: $primary-color;
-  padding: 14px 16px;
+.div_1{ 
+  flex-direction: column;
+  align-items: center;
   display: flex;
-  font-size: x-large;
-  overflow: hidden;
-  //justify-content: center;
+  ul {
+      display: flex;
+      align-items: center;
+      border-radius: 3px;
+      text-decoration: none;
+      list-style: none;
+      list-style-type: none;
+      line-break: auto;
+      background-color: $primary-color;
+      padding: 14px 16px;
+      display: flex;
+      font-size: x-large;
+      overflow: hidden;
+      //justify-content: center;
 
-  a:hover {
-    background-color: $secondary-color;
-    color: $primary-color;
-  }
+      a:hover {
+        background-color: $secondary-color;
+        color: $primary-color;
+      }
+    }
 }
-.div_1 a {
+  .div_1 a {
   background-color: $primary-color;
   color: $secondary-color;
 
@@ -107,7 +119,7 @@ a:active {
   }
 }
 
-.StartButton {
+.StartButton,.StartButton1 {
   input {
     color: #1A49E6;
     background-color: #e6c41a;
@@ -124,7 +136,16 @@ a:active {
     border-radius: 8px;
   }
 }
-
+.StartButton1{
+  font-size: x-large;
+}
 form {
   margin: 0 auto;
+}
+.div_3{
+  align-items: center;
+}
+
+.left{
+  align-items: left;
 }

@@ -6,46 +6,33 @@ global questions
 
 app = Flask(__name__)
 
+#reads json data at bootup 
 with open("static/Fragen/fragen.json") as json_data:
-    #print(type(json.load(json_data)))
     questions = json.load(json_data)
 
+#lists all question found in document
 for keys, values in questions.items():
     print(keys)
-#print(questions["Frage 1"])
 
 @app.route('/',methods=["GET", "POST"])
 def index():
-    en.cookie_delete()
     if en.cookie_check("started") and en.cookie_check("question"):
         questionlist = []
-        # lists all questions
+        # lists all questions from json and appends to questionlist
         for keys, values in questions.items():
             questionlist.append(keys)
-        
+        #gets current question count from cookie
+
         question_num = (int(en.cookie_content("question")) - 1)
         try:
+            #print(questions[questionlist[question_num]])
             question = questions[questionlist[question_num]]
-            #print(question)
-            #print(question["answers"])
+            print(question)
             answers = question["answers"]
-            answer_options = []
-            #print(answer)
-            #print(question["answers"])
-            #for y, x in question["answers"].items():
-            #    print(y)
-                #print("\n")
-            #    print(x)
-                #for q, w in :
-                #    print(q)
-                #answer_options.append(values)
-                #print(answers["1"])
-            #print(answer_options)
             return(render_template("index.html", 
                 started = True,
                 questiontitle = str(questionlist[question_num]) + " von " + str(len(questionlist)), 
                 question = question["question"],
-                answer = answer_options,
                 ))
         except:
             return "Finished"
@@ -73,7 +60,14 @@ def summary():
 def interface():
     if request.form['Neustarten'] == 'Neustarten':
         return(en.cookie_delete())
-    return(redirect("/"))
+        return(redirect("/"))
+    elif request.form['Nein'] == 'Nein':
+        print("nein")
+    elif request.form['Ja'] == 'Ja':
+        print("JA")
+    else:
+        return(redirect("/"))
+    
 
 
 if __name__ == "__main__":

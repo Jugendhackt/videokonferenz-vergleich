@@ -1,15 +1,49 @@
 {% extends 'header.html' %}
 {% block body %}
+    <script>
+            function setCookie(name,value,days) {
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days*24*60*60*1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+            }
+            function getCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for(var i=0;i < ca.length;i++) {
+                    var c = ca[i];
+                    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                }
+                return null;
+            }
+            function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+                setCookie('darkmode','true',7);
+                } 
+        var x = getCookie('darkmode');
+        if (x) {
+            myFunction()
+        }
+    </script>
     <section class="flexmaster">
         
         <div class="div_1">
             <!--nav bar-->
             <ul>
                 <img src="{{ url_for('static',filename='/img/Logo_GIF.gif') }}" alt="" width="5%" ></li>
-                <li><a href="{{ url_for('static',filename='templates/index.html') }}">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="https://jugendhackt.org/events/frankfurt/">Jugendhackt Frankfurt</a></li>
                 <li><a href="/summary">Unser Projekt</a></li>
+                <li class="left"><a onclick="myFunction()">🌚</a></li>
             </ul>
+            
+            <br>
+            <br>
         </div>
         <div class="div_2">
             <!--Platzhalter-->
@@ -17,11 +51,11 @@
         <div class="div_3">
             <!--Frage-->
             {{ questiontitle }}
-            {{ question }}
+            <h1>{{ question }}</h1>
         </div>
         {% if not started %}
             <form class="StartButton" action="/start" method="post">
-                <input type="submit" value="Start" name="Start">
+                <input type="submit" class="StartButton1" value="Start" name="Start">
             </form>
         {% endif %}
         <div class="div_4">
@@ -30,12 +64,11 @@
         </div>
         <div class="div_5">
             <!--Answer-->
-            
-            {% if answer == "1 Frage" %}
-            Hello
-            {% endif %}
+            {% if started %}
             {% include "yes_no.html" %}
             <h1>{{ answer }}</h1>
+            {% endif %}
+
         </div>
 
         {% if started %}
