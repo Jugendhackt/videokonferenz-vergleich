@@ -17,7 +17,7 @@
                 "points" : {
                     "points" : 10,
                     "point_type" : "usability",
-                    "whitelist" : ["google_meet", "teams" , "bbb"],
+                    "whitelist" : [],
                     "blacklist" : []
                 } 
             } 

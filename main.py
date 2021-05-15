@@ -11,7 +11,6 @@ with open("static/Fragen/fragen.json") as json_data:
 for keys, values in questions.items():
     print(keys)
 print(questions["Frage 1"])
-#print(z)
 app = Flask(__name__)
 
 @app.route('/')
@@ -33,7 +32,6 @@ def api():
     try: 
         print(questions[1])
         print("yup")
-        pass
     except:
         print("nope")
     return(redirect("/"))
