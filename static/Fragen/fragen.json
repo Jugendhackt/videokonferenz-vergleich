@@ -1,40 +1,86 @@
 {
     "Frage 1": {
-        "type" : "yes_no",
-        "question" : "Brauchst du Blackboards",
-        "answers" : {
-            "1" : {
-                "answ" : "Ja",
-                "points" : {
-                    "points" : 20,
-                    "point_type" : "usability",
-                    "whitelist" : ["google_meet", "teams" , "bbb"],
-                    "blacklist" : []
-                }
-            }, 
-            "2" : {
-                "answ" : "Nein",
-                "points" : {
-                    "points" : 10,
-                    "point_type" : "usability",
-                    "whitelist" : [],
-                    "blacklist" : []
-                } 
-            } 
+        "type": "yes_no",
+        "question": "Brauchst du Blackboards",
+        "answers": {
+            "1": {
+                "answ": "Ja",
+                "points": {
+                    "points": 20,
+                    "point_type": "usability"},
+                "whitelist": [
+                    "google_meet",
+                    "teams",
+                    "bbb"
+                    ],
+                "blacklist": []
+            },
+            "answ": "Nein",
+            "points": {
+                "points": 20,
+                "point_type": "usability"},
+            "whitelist": [
+                "google_meet",
+                "teams",
+                "bbb"
+                ],
+            "blacklist": []
         }
     },
     "Frage 2": {
-        "type" : "yes_no",
-        "question" : "Das ist eine Testfrage",
-        "answers" : {
-            "1" : {
-                "answ" : "Ja",
-                "points" : 10 
-            }, 
-            "2" : {
-                "answ" : "Nein",
-                "points" : 30 
-            } 
+        "type": "yes_no",
+        "question": "Brauchst du Blackboards",
+        "answers": {
+            "1": {
+                "answ": "Ja",
+                "points": {
+                    "points": 20,
+                    "point_type": "usability"},
+                "whitelist": [
+                    "google_meet",
+                    "teams",
+                    "bbb"
+                    ],
+                "blacklist": []
+            },
+            "answ": "Nein",
+            "points": {
+                "points": 20,
+                "point_type": "usability"},
+            "whitelist": [
+                "google_meet",
+                "teams",
+                "bbb"
+                ],
+            "blacklist": []
+        }
+    },
+    "Frage 3": {
+        "type": "yes_no",
+        "question": "Brauchst du Blackboards",
+        "answers": {
+            "1": {
+                "answ": "Ja",
+                "points": {
+                    "points": 20,
+                    "point_type": "usability"},
+                "whitelist": [
+                    "google_meet",
+                    "teams",
+                    "bbb"
+                    ],
+                "blacklist": []
+            },
+            "answ": "Nein",
+            "points": {
+                "points": 20,
+                "point_type": "usability"},
+            "whitelist": [
+                "google_meet",
+                "teams",
+                "bbb"
+                ],
+            "blacklist": []
         }
     }
 }

@@ -25,6 +25,10 @@
         </div>
         <div class="div_5">
             <!--Answer-->
+            
+            {% if answer == "1 Frage" %}
+            Hello
+            {% endif %}
             {% include "yes_no.html" %}
             <h1>{{ answer }}</h1>
         </div>

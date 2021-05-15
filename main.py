@@ -18,30 +18,40 @@ for keys, values in questions.items():
 def index():
     if en.cookie_check("started") and en.cookie_check("question"):
         questionlist = []
+        # lists all questions
         for keys, values in questions.items():
             questionlist.append(keys)
+        
         question_num = (int(en.cookie_content("question")) - 1)
-        if len(questionlist) >= question_num:
-            #print(str(questionlist[question_num]))
-            print("true")
+        try:
             question = questions[questionlist[question_num]]
-            #print(question)
+            print(question)
             #print(question["answers"])
             answers = question["answers"]
-            for i, y in question["answers"].items():
-                print(y)
+            answer_options = []
+            #for items, values in question["answers"].items():
+            #    print(items)
+            #    print("\n")
+            #    print(values)
+            #    for q, w in values:
+            #        print(q)
+                #answer_options.append(values)
                 #print(answers["1"])
+            #print(answer_options)
             return(render_template("index.html", 
                 questiontitle = str(questionlist[question_num]), 
                 question = question["question"],
-                answer = question["answers"]
+                answer = answer_options,
                 ))
+        except:
+            return "Finished"
     else:
         return render_template("index.html")
 
+
+#handel startup and set started question to 1
 @app.route("/start",methods=["GET", "POST"] )
 def api():
-    questionlist = []
     if request.method == "POST":
         response = make_response(redirect("/"))
         if not en.cookie_check("started") or not en.cookie_check("question"):
