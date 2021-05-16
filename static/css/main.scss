@@ -80,7 +80,7 @@ a:active {
 
 @for $i from 1 through 4 {
   .div_#{$i} {
-    border: 1px solid black;
+    //border: 1px solid black;
     flex: 1 1 auto;
 
     display: flex;

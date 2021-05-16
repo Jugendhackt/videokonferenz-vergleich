@@ -11,11 +11,12 @@ with open("static/Fragen/fragen.json") as json_data:
     questions = json.load(json_data)
 
 #lists all question found in document
-for keys, values in questions.items():
-    print(keys)
+#for keys, values in questions.items():
+    #print(keys)
 
 @app.route('/',methods=["GET", "POST"])
 def index():
+    print((list(en.cookie_content("whitelist"))))
     if en.cookie_check("started") and en.cookie_check("question"):
         questionlist = []
         # lists all questions from json and appends to questionlist
