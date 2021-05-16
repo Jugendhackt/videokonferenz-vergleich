@@ -1,7 +1,7 @@
 {
     "Frage 1": {
         "type": "yes_no",
-        "question": "Brauchst du Blackboards",
+        "question": "Brauchst du Whiteboards(Digitagle Schultafel)?",
         "answers": {
             "1": {
                 "answ": "Ja",
