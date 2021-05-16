@@ -18,8 +18,8 @@ with open("static/Fragen/fragen.json") as json_data:
 def index():
     #print((list(en.cookie_content("whitelist"))))
     #list1 = []
-    #list1 =  en.cookie_content("whitelist").split(",[]")
-    #print(list1[2])
+    #list1 =  en.cookie_content("whitelist").split(",")
+    #print(list1)
     if en.cookie_check("started") and en.cookie_check("question"):
         questionlist = []
         # lists all questions from json and appends to questionlist
@@ -66,7 +66,10 @@ def index():
                 ))
         except :
             
-            return request.cookies.get('whitelist')
+            return(render_template("index.html", 
+                started = True,
+                question = request.cookies.get('whitelist'),
+                ))
     else:
         return render_template("index.html")
 
