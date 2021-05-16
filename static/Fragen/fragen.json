@@ -33,7 +33,7 @@
     
     "Frage 2": {
         "type": "yes_no",
-        "question": "Brauchst du Blackboards",
+        "question": "Brauchen Sie Viedoaufzeichnungen?",
         "answers": {
             "1": {
                 "answ": "Ja",
@@ -65,7 +65,7 @@
     
     "Frage 3": {
         "type": "yes_no",
-        "question": "Brauchst du Blackboards",
+        "question": "Brauchen Sie Viedoaufzeichnungen?",
         "answers": {
             "1": {
                 "answ": "Ja",

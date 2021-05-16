@@ -71,7 +71,7 @@
 
         </div>
 
-        {% if started %}
+        {% if started and stoped %}
         <form class="StartButton" action="/restart" method="post">
             <input type="submit" value="Neustarten (Löscht alle Cookies)" name="Neustarten">
         </form>
