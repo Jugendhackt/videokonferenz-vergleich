@@ -105,9 +105,6 @@ a:active {
     align-items: center;
     border-width: 2px;
   }
-  :hover{
-    
-  }
   input[value="Ja"] {
     margin: 25px 25px 25px 40%;
     padding: 20px;
@@ -116,7 +113,6 @@ a:active {
     color: $yes-color;
     border-color: $yes-color;
   }
-
   input[value="Nein"] {
     margin: 25px 0px 25px 25px;
     padding: 20px;
@@ -126,6 +122,12 @@ a:active {
     border-color: $no-color;
   }
 }
+.yes_no input[value="Ja"]:hover {
+  background-color: #00800012;
+  }
+.yes_no input[value="Nein"]:hover {
+    background-color: #8000002c;
+    }
 
 .StartButton,.StartButton1 {
   input {
