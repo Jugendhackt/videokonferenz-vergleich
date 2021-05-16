@@ -2,7 +2,7 @@
 
 ## Warum
 
-Viele Leute benutzen die falsche Software für den falschen Job. So hat man z. B. Leute, die Microsoft Teams für ihre Familientreffen benutzen, aber ihre Arbeit über Discord organiesieren.
+Viele Leute benutzen die falsche Software für den falschen Job. So hat man z. B. Leute, die Microsoft Teams für ihre Familientreffen benutzen, aber ihre Arbeit über Discord organisieren.
 
 ## Was
 
