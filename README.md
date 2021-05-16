@@ -2,7 +2,7 @@
 
 Der Videokonferenzvergleich hilft dabei die richtige Software zu finden. Deshalb stellt der Videokonferenzvergleich Fragen, mit denen schnell die richtige Software gefunden werden kann.
 
-## Instalation
+## Installation
 
 Wir planen eine eigene Inzstanz zu hosten, sobald der Code performanter und stabiler läuft.
 
