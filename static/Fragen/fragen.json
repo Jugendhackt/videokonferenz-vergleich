@@ -61,36 +61,5 @@
             }
     
         }
-    },
-    
-    "Frage 3": {
-        "type": "yes_no",
-        "answers": {
-            "1": {
-                "answ": "Ja",
-                "points": {
-                    "points": 20,
-                    "point_type": "usability"},
-                "whitelist": [
-                    "google_meet",
-                    "teams",
-                    "bbb"
-                    ],
-                "blacklist": []
-            },
-            "2":{
-                "answ": "Nein",
-                "points": {
-                    "points": 20,
-                    "point_type": "usability"},
-                "whitelist": [
-                    "google_meet",
-                    "teams",
-                    "bbb"
-                    ],
-                "blacklist": []  
-            }
-    
-        }
     }
 }
