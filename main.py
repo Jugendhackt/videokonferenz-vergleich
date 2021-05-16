@@ -51,6 +51,7 @@ def index():
                         tests = str(test_res)
                         res = make_response(redirect("/"))
                         res.set_cookie("question", tests, None)
+                        res.set_cookie("whitelist", str(question["answers"]["2"]["whitelist"]), None)
                         return(res)
 
 

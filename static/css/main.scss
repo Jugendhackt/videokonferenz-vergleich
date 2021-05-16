@@ -50,7 +50,7 @@ body {
       display: flex;
       font-size: x-large;
       overflow: hidden;
-      //justify-content: center;
+      justify-content: center;
 
       a:hover {
         background-color: $secondary-color;
@@ -80,7 +80,7 @@ a:active {
 
 @for $i from 1 through 4 {
   .div_#{$i} {
-    //border: 1px solid black;
+    border: 1px solid black;
     flex: 1 1 auto;
 
     display: flex;
@@ -105,7 +105,7 @@ a:active {
   }
 
   input[value="Ja"] {
-    //margin: 25px 25px 25px 40%;
+    margin: 25px 25px 25px 40%;
     padding: 20px;
     padding-bottom: 13px;
     padding-top: 13px;
@@ -114,7 +114,7 @@ a:active {
   }
 
   input[value="Nein"] {
-    //margin: 25px 0px 25px 25px;
+    margin: 25px 0px 25px 25px;
     padding: 20px;
     padding-bottom: 13px;
     padding-top: 13px;
