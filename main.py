@@ -16,7 +16,10 @@ with open("static/Fragen/fragen.json") as json_data:
 
 @app.route('/',methods=["GET", "POST"])
 def index():
-    print((list(en.cookie_content("whitelist"))))
+    #print((list(en.cookie_content("whitelist"))))
+    #list1 = []
+    #list1 =  en.cookie_content("whitelist").split(",[]")
+    #print(list1[2])
     if en.cookie_check("started") and en.cookie_check("question"):
         questionlist = []
         # lists all questions from json and appends to questionlist
@@ -28,7 +31,7 @@ def index():
         try:
             #print(questions[questionlist[question_num]])
             question = questions[questionlist[question_num]]
-            print(question)
+            #print(question)
             answers = question["answers"]
             if request.method == "POST":
                 try:
