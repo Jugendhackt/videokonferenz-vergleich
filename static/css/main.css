@@ -80,30 +80,30 @@ body {
 }
 
 .div_1 ul a:hover {
-  background-color: #454545;
+  background-color: #423e3e;
   color: #e6c41a;
 }
 
 .div_1 a {
   background-color: #e6c41a;
-  color: #454545;
+  color: #423e3e;
   text-decoration: none;
   padding: 14px 16px;
   font-family: Roboto_Bold;
 }
 
 a:link {
-  color: #454545;
+  color: #423e3e;
 }
 
 /* visited link */
 a:visited {
-  color: #454545;
+  color: #423e3e;
 }
 
 /* selected link */
 a:active {
-  color: #454545;
+  color: #423e3e;
 }
 
 .div_1 {
@@ -207,9 +207,9 @@ a:active {
 }
 
 .StartButton input, .StartButton1 input {
-  color: #444444;
+  color: #423e3e;
   background-color: #e6c41a;
-  border-color: #444444;
+  border-color: #423e3e;
   border-width: 0.5;
   border-style: ridge;
   font: x-large;

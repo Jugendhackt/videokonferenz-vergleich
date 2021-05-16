@@ -1,5 +1,7 @@
 $primary-color: hsl(50, 80%, 50%);
-$secondary-color: hsl(0, 0%, 27%);
+$secondary-color: hsl(0, 3%, 25%);
+$yes-color: #a3e77f;
+$no-color: red;
 
 @font-face {
   font-family: Roboto_Regular;
@@ -109,8 +111,8 @@ a:active {
     padding: 20px;
     padding-bottom: 13px;
     padding-top: 13px;
-    color: #a3e77f;
-    border-color: #a3e77f;
+    color: $yes-color;
+    border-color: $yes-color;
   }
 
   input[value="Nein"] {
@@ -118,16 +120,16 @@ a:active {
     padding: 20px;
     padding-bottom: 13px;
     padding-top: 13px;
-    color: red;
-    border-color: red;
+    color: $no-color;
+    border-color: $no-color;
   }
 }
 
 .StartButton,.StartButton1 {
   input {
-    color: #444444;
-    background-color: #e6c41a;
-    border-color: #444444;
+    color: $secondary-color;
+    background-color: $primary-color;
+    border-color: $secondary-color;
     border-width: 0.5;
     border-style: ridge;
     font: x-large;
