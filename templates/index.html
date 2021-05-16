@@ -1,37 +1,9 @@
 {% extends 'header.html' %}
 {% block body %}
-    <script>
-            function setCookie(name,value,days) {
-                var expires = "";
-                if (days) {
-                    var date = new Date();
-                    date.setTime(date.getTime() + (days*24*60*60*1000));
-                    expires = "; expires=" + date.toUTCString();
-                }
-                document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-            }
-            function getCookie(name) {
-                var nameEQ = name + "=";
-                var ca = document.cookie.split(';');
-                for(var i=0;i < ca.length;i++) {
-                    var c = ca[i];
-                    while (c.charAt(0)==' ') c = c.substring(1,c.length);
-                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-                }
-                return null;
-            }
-            function darkmode() {
-                var element = document.body;
-                element.classList.toggle("dark-mode");
-                
-                } 
-        var x = getCookie('darkmode');
-        if (x) {
-            darkmode()
-        }
-    </script>
+    <script src="./dark_mode.js"></script>
+
     <section class="flexmaster">
-        
+
         <div class="div_1">
             <!--nav bar-->
             <ul>
@@ -41,7 +13,7 @@
                 <li><a href="/summary">Unser Projekt</a></li>
                 <li class="left"><a onclick="darkmode();setCookie('darkmode','true',7)">🌚</a></li>
             </ul>
-            
+
             <br>
             <br>
         </div>
@@ -80,7 +52,7 @@
             <input type="submit" value="Neustarten (Löscht alle Cookies)" name="Neustarten">
         </form>
         {% endif %}
-        
+
     </section>
 {% endblock %}
 
