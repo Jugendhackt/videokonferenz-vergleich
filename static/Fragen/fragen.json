@@ -1,7 +1,7 @@
 {
     "Frage 1": {
         "type": "yes_no",
-        "question": "Brauchst du Whiteboards (Digitagle Schultafel)?",
+        "question": "Brauchen Sie Whiteboards (Digitagle Schultafel)?",
         "answers": {
             "1": {
                 "answ": "Ja",
@@ -65,11 +65,7 @@
     
     "Frage 3": {
         "type": "yes_no",
-        "question": "Benötigen Sie Videoaufzeichnungen?",
         "answers": {
-            "1": {
-                "answ": "Ja",
-                "points": {
                     "points": 20,
                     "point_type": "usability"},
                 "whitelist": [
