@@ -7,7 +7,8 @@
                 "answ": "Ja",
                 "points": {
                     "points": 20,
-                    "point_type": "usability"},
+                    "point_type": "usability"
+                },
                 "whitelist": [
                     "google_meet",
                     "teams",
@@ -19,18 +20,18 @@
                 "answ": "Nein",
                 "points": {
                     "points": 20,
-                    "point_type": "usability"},
+                    "point_type": "usability"
+                },
                 "whitelist": [
                     "google_meet",
                     "teams",
                     "bbb"
                     ],
-                "blacklist": []  
+                "blacklist": []
             }
-    
         }
     },
-    
+
     "Frage 2": {
         "type": "yes_no",
         "question": "Ist es Ihnen wichtig, dass Sie alle Schüler*innen auf einen Blick sehen?",
@@ -39,7 +40,8 @@
                 "answ": "Ja",
                 "points": {
                     "points": 20,
-                    "point_type": "usability"},
+                    "point_type": "usability"
+                },
                 "whitelist": [
                     "google_meet",
                     "teams",
@@ -51,15 +53,15 @@
                 "answ": "Nein",
                 "points": {
                     "points": 20,
-                    "point_type": "usability"},
+                    "point_type": "usability"
+                },
                 "whitelist": [
                     "go_to_meeting",
                     "teams",
                     "bbb"
                     ],
-                "blacklist": []  
+                "blacklist": []
             }
-    
         }
     }
 }
