@@ -33,7 +33,7 @@
     
     "Frage 2": {
         "type": "yes_no",
-        "question": "Brauchen Sie Viedoaufzeichnungen?",
+        "question": "Ist es Ihnen wichtig, dass Sie alle Schüler*innen auf einen Blick sehen?",
         "answers": {
             "1": {
                 "answ": "Ja",
