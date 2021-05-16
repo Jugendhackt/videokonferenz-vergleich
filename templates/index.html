@@ -20,14 +20,14 @@
                 }
                 return null;
             }
-            function myFunction() {
+            function darkmode() {
                 var element = document.body;
                 element.classList.toggle("dark-mode");
-                setCookie('darkmode','true',7);
+                
                 } 
         var x = getCookie('darkmode');
         if (x) {
-            myFunction()
+            darkmode()
         }
     </script>
     <section class="flexmaster">
@@ -39,7 +39,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="https://jugendhackt.org/events/frankfurt/">Jugendhackt Frankfurt</a></li>
                 <li><a href="/summary">Unser Projekt</a></li>
-                <li class="left"><a onclick="myFunction()">🌚</a></li>
+                <li class="left"><a onclick="darkmode();setCookie('darkmode','true',7)">🌚</a></li>
             </ul>
             
             <br>
@@ -72,7 +72,7 @@
         </div>
 
         {% if started %}
-        <form class="StartButton" action="/interface" method="post">
+        <form class="StartButton" action="/restart" method="post">
             <input type="submit" value="Neustarten (Löscht alle Cookies)" name="Neustarten">
         </form>
         {% endif %}

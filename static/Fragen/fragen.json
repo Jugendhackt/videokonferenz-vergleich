@@ -53,7 +53,7 @@
                     "points": 20,
                     "point_type": "usability"},
                 "whitelist": [
-                    "google_meet",
+                    "go_to_meeting",
                     "teams",
                     "bbb"
                     ],

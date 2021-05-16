@@ -4,7 +4,7 @@ class Engine():
     def __init__(self):
         return 0
 
-    def setcookie(key, data,response = "", duration = None):
+    def setcookie(key, data,response, duration = None):
         res = make_response(response)
         res.set_cookie(key, data, duration)
         return res

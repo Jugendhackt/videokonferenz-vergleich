@@ -2,7 +2,7 @@ from flask import request, Flask, render_template, make_response, url_for, redir
 from jinja2 import Template
 import json
 from engine import Engine as en
-global questions
+global question
 
 app = Flask(__name__)
 
@@ -29,20 +29,46 @@ def index():
             question = questions[questionlist[question_num]]
             print(question)
             answers = question["answers"]
+            if request.method == "POST":
+                try:
+                    if request.form['Nein']:
+                        print("nein")
+                        print(question["answers"]["2"]["whitelist"])
+                        test = en.cookie_content("question")
+                        res = make_response(redirect("/"))
+                        test_res = int(test) + int(1)
+                        tests = str(test_res)
+                        res.set_cookie("question", tests, None)
+                        res.set_cookie("whitelist", str(question["answers"]["2"]["whitelist"]), None)
+                        return(res)
+
+                except:
+                    if request.form['Ja']:
+                        print("ja")                        
+                        test = en.cookie_content("question")
+                        res = make_response(redirect("/"))
+                        test_res = int(test) + int(1)
+                        tests = str(test_res)
+                        res = make_response(redirect("/"))
+                        res.set_cookie("question", tests, None)
+                        return(res)
+
+
             return(render_template("index.html", 
                 started = True,
                 questiontitle = str(questionlist[question_num]) + " von " + str(len(questionlist)), 
                 question = question["question"],
                 ))
-        except:
-            return "Finished"
+        except :
+            
+            return request.cookies.get('whitelist')
     else:
         return render_template("index.html")
 
 
 #handel startup and set started question to 1
 @app.route("/start",methods=["GET", "POST"] )
-def api():
+def start():
     if request.method == "POST":
         response = make_response(redirect("/"))
         if not en.cookie_check("started") or not en.cookie_check("question"):
@@ -56,18 +82,28 @@ def api():
 def summary():
     return render_template("Videokonferenz_Vergleich.html")
 
-@app.route('/interface',methods=["GET", "POST"])
-def interface():
+@app.route('/restart',methods=["POST"])
+def restart():
     if request.form['Neustarten'] == 'Neustarten (Löscht alle Cookies)':
         return(en.cookie_delete())
         return(redirect("/"))
-    elif request.form['Nein'] == 'Nein':
-        print("nein")
-    elif request.form['Ja'] == 'Ja':
-        print("JA")
-    else:
-        return(redirect("/"))
+    return(redirect("/"))
     
+@app.route('/interface',methods=["POST"])
+def interface():
+    return(redirect("/"))
+
+
+@app.route('/yes', methods=["POST"])
+def yes():
+   if request.form['Ja']:
+        return(redirect("/"))
+
+
+@app.route('/no', methods=["POST"])
+def no():
+    if request.form['Nein']:
+        return(redirect("/"))
 
 
 if __name__ == "__main__":
