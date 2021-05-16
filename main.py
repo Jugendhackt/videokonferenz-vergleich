@@ -68,6 +68,7 @@ def index():
             
             return(render_template("index.html", 
                 started = True,
+                stoped = True,
                 question = request.cookies.get('whitelist'),
                 ))
     else:

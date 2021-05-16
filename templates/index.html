@@ -49,6 +49,9 @@
             <!--Platzhalter-->
         </div>
         <div class="div_3">
+            {% if stoped %}
+            <h1>Ergebnis</h1>
+            {% endif %}
             <!--Frage-->
             {{ questiontitle }}
             <h1>{{ question }}</h1>
@@ -64,14 +67,15 @@
         </div>
         <div class="div_5">
             <!--Answer-->
-            {% if started %}
+
+            {% if started and not stoped %}
             {% include "yes_no.html" %}
             <h1>{{ answer }}</h1>
             {% endif %}
 
         </div>
 
-        {% if started and stoped %}
+        {% if started  %}
         <form class="StartButton" action="/restart" method="post">
             <input type="submit" value="Neustarten (Löscht alle Cookies)" name="Neustarten">
         </form>
